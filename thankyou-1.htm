@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="./patient-form-1.css"> <!-- links to css file-->
+        <title>Thank you! | Your title</title>
+    </head>
+    <body>
+<header>
+    <table width="100%">
+        <tr>
+            <td valign="top" align="left" width="20%">
+                <div class="image">
+                    <img align="center" src="./Logo_for_assignment_1.jpg" alt="Klok Medical Center Logo" width="70px" id="logo"/>
+                </div>
+            </td>
+            <td>
+                <h2>Klok Meical Center</h2>
+            </td>
+            <td valign="bottom" align="right" width="20%">
+                <p>Today's Date: <span id="today"></span></p>
+            </td>
+        </tr>
+    </table>
+</header>
+<hr>
+<main>
+    <h1>Thank you! Your Information Has Been Recorded</h1>
+</main>
+<footer>
+    <p id="footer">&#169 Klock Medical Center | <a href="https://tuan-nguyen03.w3spaces.com/HomeWork1.html" target="_blank" rel="noopener noreferrer">Contact Us!</a></p>
+</footer>
+<script>
+    const d = new Date();
+    let text = d.toLocaleDateString();
+    document.getElementById("today").innerHTML = text;
+
+</script>
+</body>
+
+</html>
