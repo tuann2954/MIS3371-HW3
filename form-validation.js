@@ -111,6 +111,28 @@ function validateDob() {
     }
 }
 
+function validateAddress1() {
+    let input = document.getElementById("address1").value.trim();
+    let error = document.getElementById("address1-error");
+
+    if (input.length < 2 || input.length > 30) {
+        error.innerHTML = "Address must be between 2 and 30 characters.";
+    } else {
+        error.innerHTML = "";
+    }
+}
+
+function validateAddress2() {
+    let input = document.getElementById("address2").value.trim();
+    let error = document.getElementById("address2-error");
+
+    if (input.length > 0 && (input.length < 2 || input.length > 30)) {
+        error.innerHTML = "Optional address must be 2-30 characters if entered.";
+    } else {
+        error.innerHTML = "";
+    }
+}
+
 function validateEmail() {
     let input = document.getElementById("email").value;
     let error = document.getElementById("email-error");
@@ -176,6 +198,8 @@ document.getElementById("uid").addEventListener("input", validateUid);
 document.getElementById("zipcode").addEventListener("input", validateZcode);
 document.getElementById("city").addEventListener("input", validateCity);
 document.getElementById("city").addEventListener("blur", validateCity);
+document.getElementById("address1").addEventListener("input", validateAddress1);
+document.getElementById("address2").addEventListener("input", validateAddress2);
 
 function getcustomerinformation() {
     var form = document.querySelector("form"); 
